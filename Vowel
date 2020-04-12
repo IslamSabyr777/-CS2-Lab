@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Vowel {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        char ch;
+        int arr[] = new int[5];
+
+        // Initializing counts to zero
+        for(int i = 0;i<arr.length;i++){
+            arr[i] = 0;
+        }
+
+        // Reading input from user
+        System.out.print("Enter sentence: ");
+        String s = scan.nextLine().toLowerCase();
+
+        // Looping from each character of the string
+        for(int i = 0;i<s.length();i++){
+            ch = s.charAt(i);
+            switch (ch){
+                case 'a':
+                    arr[0]+=1;
+                    break;
+                case 'e':
+                    arr[1]+=1;
+                    break;
+                case 'i':
+                    arr[2]+=1;
+                    break;
+                case 'o':
+                    arr[3]+=1;
+                    break;
+                case 'u':
+                    arr[4]+=1;
+                    break;
+            }
+        }
+
+        // Printing counts
+        System.out.println("Vowel occurrence report:");
+        System.out.println("A's: "+arr[0]);
+        System.out.println("E's: "+arr[1]);
+        System.out.println("I's: "+arr[2]);
+        System.out.println("O's: "+arr[3]);
+        System.out.println("U's: "+arr[4]);
+    }
+}
